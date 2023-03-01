@@ -1,11 +1,11 @@
 import React from "react";
-import "./descriptions.css";
+import "./cardList.css";
 
 import { FaArrowUp, FaArrowDown, FaWind } from "react-icons/fa";
 import { BiHappy } from "react-icons/bi";
 import { MdCompress, MdOutlineWaterDrop } from "react-icons/md";
 
-const Descriptions = ({ weather, units }) => {
+const CardList = ({ weather, units }) => {
   const tempUnit = units === "metric" ? "°C" : "°F";
   const windUnit = units === "metric" ? "m/s" : "m/h";
 
@@ -54,10 +54,10 @@ const Descriptions = ({ weather, units }) => {
     },
   ];
   return (
-    <div className="section section__descriptions">
+    <div className='section section__descriptions'>
       {cards.map(({ id, icon, title, data, unit }) => (
-        <div key={id} className="card">
-          <div className="description__card-icon">
+        <div key={id} className='card'>
+          <div className='description__card-icon'>
             {icon}
             <small>{title}</small>
           </div>
@@ -68,4 +68,4 @@ const Descriptions = ({ weather, units }) => {
   );
 };
 
-export default Descriptions;
+export default CardList;
