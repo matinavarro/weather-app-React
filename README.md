@@ -10,8 +10,8 @@ $ cd weather-app-React
 $ yarn install
 # Run the app
 $ yarn run start
-#Build
+# Build
 $ yarn run build
-#To Run
+# To Run
 $ yarn
 $ yarn dev
