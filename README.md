@@ -1,4 +1,4 @@
-# weather-app-React
+# Weather-App-React
 Global Weather App 
 
 Quick usage
