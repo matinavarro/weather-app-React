@@ -1,7 +1,7 @@
 # Weather-App-React
 Global Weather App 
 
-Quick usage
+# Quick usage
 # Clone this repository
 $ git clone https://github.com/matinavarro/weather-app-React.git
 # Go into the repository
