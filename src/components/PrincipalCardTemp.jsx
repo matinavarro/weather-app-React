@@ -1,4 +1,5 @@
 import React from "react";
+import "./principalCardTemp.css";
 
 const PrincipalCardTemp = ({ weather, units }) => {
   return (
