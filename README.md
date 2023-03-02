@@ -2,27 +2,27 @@
 Global Weather App 
 
 # Quick usage
-# Clone this repository
+### Clone this repository
 ```
 $ git clone https://github.com/matinavarro/weather-app-React.git
 ```
-# Go into the repository
+### Go into the repository
 ```
 $ cd weather-app-React
 ```
-# Install dependencies
+### Install dependencies
 ```
 $ yarn install
 ```
-# Run the app
+### Run the app
 ```
 $ yarn run start
 ```
-# Build
+### Build
 ```
 $ yarn run build
 ```
-# To Run
+### To Run
 ```
 $ yarn
 $ yarn dev
