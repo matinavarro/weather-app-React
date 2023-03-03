@@ -14,7 +14,7 @@
     background-color: transparent;
     color: white;
     padding: 0.5rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
   }
   
@@ -23,7 +23,7 @@
     border: 0.8px solid rgb(0, 174, 255);
   }
   
-  .section__inputs>button{
+  /* .section__inputs>button{
     padding: 10px 50px;
     border:none;
     border-radius: 0.4rem;
@@ -35,4 +35,66 @@
   .section__inputs>button:hover{
     cursor: pointer;
     background-color: lightgray;
+  } */
+
+  /* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch .inpt {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9dc4e6;
+    transition: .4s;
+    border-radius: 30px;
+    box-shadow: inset 3px 3px 5px rgba(0,0,0);
+  }
+
+  .slider>p{
+
+    border:none;
+    font-size:18px;
+    font-weight: 600;
+    transform: translateX(-2.5em);
+    color: white;
+    width: 2em;
+    height: 1.8em;
+    padding: 5px 5px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50px;
+    left: 0.3em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  .inpt:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  .inpt:checked + .slider:before {
+    transform: translateX(1.5em);
   }

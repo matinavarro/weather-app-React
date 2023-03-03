@@ -36,7 +36,7 @@ const App = () => {
   }, [units, city]);
 
   // function button temperture scale
-  const changeTempScale = (e) => {
+  const changeTempScale = () => {
     const button = buttonRef.current;
     const currentUnit = button.innerText.slice(1);
 
