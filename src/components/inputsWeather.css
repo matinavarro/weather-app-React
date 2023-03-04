@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: var(--section-overlay);
   }
   
@@ -66,13 +66,28 @@
     border-radius: 30px;
     box-shadow: inset 3px 3px 5px rgba(0,0,0);
   }
+  .containerScale{
+    display: flex;
+    width: 7em;
+    height: 2em;
+    transform: translate(-1.8em, -1em);
+    justify-content: space-between;
+  }
 
-  .slider>p{
+  .metric{
+    border:none;
+    font-size:16px;
+    font-weight: 600;
+    color: white;
+    width: 2em;
+    height: 1.8em;
+    padding: 5px 5px;
+  }
+  .imperial{
 
     border:none;
-    font-size:18px;
+    font-size:16px;
     font-weight: 600;
-    transform: translateX(-2.5em);
     color: white;
     width: 2em;
     height: 1.8em;

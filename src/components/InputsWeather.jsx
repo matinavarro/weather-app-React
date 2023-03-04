@@ -1,7 +1,7 @@
 import React from "react";
 import "./inputsWeather.css";
 
-const InputsWeather = ({ changeCountry, buttonRef, changeScale }) => {
+const InputsWeather = ({ changeCountry, changeScale, currentUnit }) => {
   return (
     <div className='section section__inputs'>
       <input
@@ -10,17 +10,19 @@ const InputsWeather = ({ changeCountry, buttonRef, changeScale }) => {
         name='city'
         placeholder='Enter City...'
       />
-      {/* <button ref={buttonRef} onClick={changeScale}>
-        °F
-      </button> */}
 
       <label className='switch'>
-        <input className='inpt' type='checkbox' />
-        <span onClick={changeScale} className='slider'>
-          <p ref={buttonRef} className='scaleTemp'>
-            °C
-          </p>
-        </span>
+        <input
+          value={currentUnit}
+          onClick={changeScale}
+          className='inpt'
+          type='checkbox'
+        />
+        <span className='slider'></span>
+        <div className='containerScale'>
+          <p className='metric'>°C</p>
+          <p className='metric'>°F</p>
+        </div>
       </label>
     </div>
   );

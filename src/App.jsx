@@ -3,7 +3,6 @@ import coldBg from "./assets/cold.jpg";
 
 import { useEffect, useState } from "react";
 import { getFormattedWeatherData } from "./service/waetherService";
-import React, { useRef } from "react";
 
 import CardList from "./components/CardList";
 import InputsWeather from "./components/InputsWeather";
@@ -14,8 +13,7 @@ const App = () => {
   const [bg, setBg] = useState(hotBg);
   const [city, setCity] = useState("paris");
   const [units, setUnits] = useState("metric");
-
-  const buttonRef = useRef();
+  const [scale, setscale] = useState(false);
 
   // call API
   useEffect(() => {
@@ -36,17 +34,13 @@ const App = () => {
   }, [units, city]);
 
   // function button temperture scale
-  const changeTempScale = () => {
-    const button = buttonRef.current;
-    const currentUnit = button.innerText.slice(1);
-
-    const isCelsius = currentUnit === "C";
-    button.innerText = isCelsius ? "°F" : "°C";
-    setUnits(isCelsius ? "metric" : "imperial");
+  const handleChangeTempScale = () => {
+    setscale(!scale);
+    setUnits(scale ? "metric" : "imperial");
   };
 
   // function change city
-  const enterKeyCity = (e) => {
+  const handlesEnterKeyCity = (e) => {
     if (e.keyCode === 13) {
       setCity(e.currentTarget.value);
       e.currentTarget.blur();
@@ -60,9 +54,9 @@ const App = () => {
           <div className='container'>
             {/*botton and search*/}
             <InputsWeather
-              changeCountry={enterKeyCity}
-              buttonRef={buttonRef}
-              changeScale={changeTempScale}
+              changeCountry={handlesEnterKeyCity}
+              currentUnit={scale}
+              changeScale={handleChangeTempScale}
             />
             {/*Principal Card Description*/}
             <PrincipalCardTem weather={weather} units={units} />
