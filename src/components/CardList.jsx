@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 import "./cardList.css";
 
 import { FaArrowUp, FaArrowDown, FaWind } from "react-icons/fa";
@@ -56,13 +57,7 @@ const CardList = ({ weather, units }) => {
   return (
     <div className='section section__descriptions'>
       {cards.map(({ id, icon, title, data, unit }) => (
-        <div key={id} className='card'>
-          <div className='description__card-icon'>
-            {icon}
-            <small>{title}</small>
-          </div>
-          <h2>{`${data} ${unit}`}</h2>
-        </div>
+        <Card id={id} icon={icon} title={title} data={data} unit={unit} />
       ))}
     </div>
   );

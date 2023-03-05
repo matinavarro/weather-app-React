@@ -25,7 +25,9 @@ const App = () => {
       console.log(data);*/
 
       // dynamic bg
-      const threshold = units === "metric" ? 20 : 60;
+      const tempMaxBg = 60;
+      const tempMinBg = 20;
+      const threshold = units === "metric" ? tempMinBg : tempMaxBg;
       if (data.temp <= threshold) setBg(coldBg);
       else setBg(hotBg);
     };
@@ -40,7 +42,7 @@ const App = () => {
   };
 
   // function change city
-  const handlesEnterKeyCity = (e) => {
+  const handleEnterKeyCity = (e) => {
     if (e.keyCode === 13) {
       setCity(e.currentTarget.value);
       e.currentTarget.blur();
@@ -54,7 +56,7 @@ const App = () => {
           <div className='container'>
             {/*botton and search*/}
             <InputsWeather
-              changeCountry={handlesEnterKeyCity}
+              changeCountry={handleEnterKeyCity}
               currentUnit={scale}
               changeScale={handleChangeTempScale}
             />
